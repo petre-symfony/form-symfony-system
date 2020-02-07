@@ -21,7 +21,9 @@ class ArticleFormType extends AbstractType {
 			])
 			->add('author', EntityType::class, [
 				'class' => User::class,
-				'choice_label' => 'email'
+				'choice_label' => function($user){
+				  return sprintf('(%d) %s', $user->getId(), $user->getEmail());
+				}
 			]);
 	}
 	
