@@ -2,6 +2,7 @@
 namespace App\Form;
 
 use App\Entity\Article;
+use App\Entity\User;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -18,7 +19,9 @@ class ArticleFormType extends AbstractType {
 			->add('publishedAt', null, [
 				'widget' => 'single_text'
 			])
-			->add('author', EntityType::class);
+			->add('author', EntityType::class, [
+				'class' => User::class
+			]);
 	}
 	
 	public function configureOptions(OptionsResolver $resolver) {
