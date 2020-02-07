@@ -16,7 +16,8 @@ class ArticleFormType extends AbstractType {
 			->add('content')
 			->add('publishedAt', null, [
 				'widget' => 'single_text'
-			]);
+			])
+			->add('author');
 	}
 	
 	public function configureOptions(OptionsResolver $resolver) {
