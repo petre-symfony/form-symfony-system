@@ -32,7 +32,7 @@ class ArticleAdminController extends AbstractController {
 			$em->persist($article);
 			$em->flush();
 			
-			return $this->redirectToRoute('app_homepage');
+			return $this->redirectToRoute('admin_article_list');
 		}
 		
 		return $this->render('article_admin/new.html.twig', [
