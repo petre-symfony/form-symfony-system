@@ -20,7 +20,8 @@ class ArticleFormType extends AbstractType {
 				'widget' => 'single_text'
 			])
 			->add('author', EntityType::class, [
-				'class' => User::class
+				'class' => User::class,
+				'choice_label' => 'email'
 			]);
 	}
 	
