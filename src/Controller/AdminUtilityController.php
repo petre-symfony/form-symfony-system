@@ -15,6 +15,6 @@ class AdminUtilityController extends AbstractController {
 		
 		return $this->json([
 			'users' => $users
-		]);
+		], 200, [], ['groups' => ['main']]);
 	}
 }
