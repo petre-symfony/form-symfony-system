@@ -61,6 +61,11 @@ class User implements UserInterface {
 	private $apiTokens;
 	
 	/**
+	 * @ORM\Column(type="datetime")
+	 */
+	private $agrredTermsAt;
+	
+	/**
 	 * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="author")
 	 */
 	private $articles;
@@ -226,5 +231,15 @@ class User implements UserInterface {
 	
 	public function __toString() {
 		return $this->getFirstName();
+	}
+	
+	public function getAgreedTermsAt(): ?\DateTimeInterface{
+		return $this->agrredTermsAt;
+	}
+	
+	public function setPublishedAt(?\DateTimeInterface $agrredTermsAt): self{
+		$this->agrredTermsAt = $agrredTermsAt;
+		
+		return $this;
 	}
 }
