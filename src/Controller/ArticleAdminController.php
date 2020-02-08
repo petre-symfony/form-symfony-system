@@ -54,9 +54,11 @@ class ArticleAdminController extends AbstractController {
 			$em->persist($article);
 			$em->flush();
 			
-			$this->addFlash('success', 'Article Created! Knowledge is power!');
+			$this->addFlash('success', 'Article updated! Inaccuracies squashed!');
 			
-			return $this->redirectToRoute('admin_article_list');
+			return $this->redirectToRoute('admin_article_edit', [
+				'id' => $article->getId()
+			]);
 		}
 		
 		return $this->render('article_admin/new.html.twig', [
