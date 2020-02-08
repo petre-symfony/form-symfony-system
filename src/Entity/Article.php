@@ -233,7 +233,7 @@ class Article{
 	 */
 	public function validate(ExecutionContextInterface $context, $payload){
 		if (stripos($this->getTitle(), 'the borg') !== false) {
-			$context->buildViolation('Um.. the Borg kinda makes us nervous')
+			$context->buildViolation('Um.. the Borgcd kinda makes us nervous')
 				->atPath('title')
 				->addViolation();
 		}
