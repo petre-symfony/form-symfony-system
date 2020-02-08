@@ -25,9 +25,7 @@ class ArticleFormType extends AbstractType {
 			->add('title', TextType::class, [
 				'help' => 'Choose something catchy'
 			])
-			->add('content', null, [
-				'attr' => ['rows' => 10]
-			])
+			->add('content')
 			->add('publishedAt', null, [
 				'widget' => 'single_text'
 			])
