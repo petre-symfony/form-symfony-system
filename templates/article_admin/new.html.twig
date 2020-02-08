@@ -7,6 +7,7 @@
     {{ form_row(articleForm.title, {
       label: 'Article title'
     }) }}
+    {{ articleForm.title.vars.id }}
     {{ form_row(articleForm.content) }}
     {{ form_row(articleForm.publishedAt) }}
     {{ form_row(articleForm.author) }}
