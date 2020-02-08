@@ -13,12 +13,12 @@
   {%- if help is not empty -%}
     {%- set widget_attr = {attr: {'aria-describedby': id ~"_help"}} -%}
   {%- endif -%}
-  <div{% with {attr: row_attr} %}{{ block('attributes') }}{% endwith %}>
-    {{- form_label(form) -}}
-    {{- form_errors(form) -}}
-    {{- form_widget(form, widget_attr) -}}
-    {{- form_help(form) -}}
-  </div>
+
+  {{- form_label(form) -}}
+  {{- form_errors(form) -}}
+  {{- form_widget(form, widget_attr) -}}
+  {{- form_help(form) -}}
+
 {%- endblock form_row -%}
 
 {% block body %}
