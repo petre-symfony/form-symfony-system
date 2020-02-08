@@ -11,10 +11,7 @@ class UserRegistrationFormType extends AbstractType {
 	public function buildForm(FormBuilderInterface $builder, array $options) {
 		$builder
 			->add('email')
-			->add('roles')
-			->add('firstName')
 			->add('password')
-			->add('twitterUsername')
 		;
 	}
 
