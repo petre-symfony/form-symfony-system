@@ -34,7 +34,9 @@ class ArticleFormType extends AbstractType {
 			->add('publishedAt', null, [
 				'widget' => 'single_text'
 			])
-			->add('author', UserSelectTextType::class);
+			->add('author', UserSelectTextType::class, [
+				'disabled' => $isEdit
+			]);
 	}
 	
 	public function configureOptions(OptionsResolver $resolver) {
