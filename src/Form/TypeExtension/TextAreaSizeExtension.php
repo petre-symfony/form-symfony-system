@@ -15,7 +15,7 @@ class TextAreaSizeExtension implements FormTypeExtensionInterface {
 	}
 	
 	public function buildView(FormView $view, FormInterface $form, array $options) {
-		$view->vars['attr']['rows'] = 10;
+		$view->vars['attr']['rows'] = $options['rows'];
 	}
 	
 	public function finishView(FormView $view, FormInterface $form, array $options) {
@@ -23,7 +23,9 @@ class TextAreaSizeExtension implements FormTypeExtensionInterface {
 	}
 	
 	public function configureOptions(OptionsResolver $resolver) {
-	
+		$resolver->setDefaults([
+			'rows' => 10
+		]);
 	}
 	
 	public function getExtendedType() {
