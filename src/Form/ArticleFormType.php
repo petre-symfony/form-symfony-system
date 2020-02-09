@@ -22,7 +22,7 @@ class ArticleFormType extends AbstractType {
 	
 	public function buildForm(FormBuilderInterface $builder, array $options) {
 		$article = $options['data'] ?? null;
-		dd($article);
+		$isEdit = $article && $article->getId();
 		
 		$builder
 			->add('title', TextType::class, [
