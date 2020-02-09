@@ -10,10 +10,5 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 /**
  * @method User|null getUser()
  */
-/** abstract */class BaseController extends AbstractController {
-	/**
-	protected function getUser():User {
-		return parent::getUser();
-	}
-  */
+abstract class BaseController extends AbstractController {
 }
