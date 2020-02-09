@@ -2,6 +2,7 @@
 namespace App\Form\TypeExtension;
 
 
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormTypeExtensionInterface;
@@ -26,7 +27,10 @@ class TextAreaSizeExtension implements FormTypeExtensionInterface {
 	}
 	
 	public function getExtendedType() {
-		// TODO: Implement getExtendedType() method.
+		return '';
 	}
 	
+	public function getExtendedTypes():iterable {
+		return [TextareaType::class];
+	}
 }
