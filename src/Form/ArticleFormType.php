@@ -21,6 +21,8 @@ class ArticleFormType extends AbstractType {
 	}
 	
 	public function buildForm(FormBuilderInterface $builder, array $options) {
+		dd($options);
+		
 		$builder
 			->add('title', TextType::class, [
 				'help' => 'Choose something catchy'
