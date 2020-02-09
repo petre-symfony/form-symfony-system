@@ -23,7 +23,7 @@ class TextAreaSizeExtension implements FormTypeExtensionInterface {
 	}
 	
 	public function configureOptions(OptionsResolver $resolver) {
-		
+	
 	}
 	
 	public function getExtendedType() {
