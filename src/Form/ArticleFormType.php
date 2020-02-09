@@ -44,6 +44,13 @@ class ArticleFormType extends AbstractType {
 				],
 				'required' => false
 			])
+			->add('specificLocationName', ChoiceType::class, [
+				'placeholder' => 'Where exactly?',
+				'choices' => [
+					'TODO' => 'TODO'
+				],
+				'required' => false
+			])
 		;
 		
 		if ($options['include_published_at']){
