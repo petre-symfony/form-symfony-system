@@ -75,6 +75,11 @@ class Article{
 	 */
 	private $author;
 	
+	/**
+	 * @ORM\Column(type="string", length=255, nullable=true)
+	 */
+	private $location;
+	
 	public function __construct(){
 		$this->comments = new ArrayCollection();
 		$this->tags = new ArrayCollection();
@@ -238,5 +243,15 @@ class Article{
 				->atPath('title')
 				->addViolation();
 		}
+	}
+	
+	public function getLocation(): ?string{
+		return $this->location;
+	}
+	
+	public function setLocation(?string $location): self{
+		$this->location = $location;
+		
+		return $this;
 	}
 }
