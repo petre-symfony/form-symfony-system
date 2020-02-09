@@ -82,6 +82,7 @@ class ArticleAdminController extends AbstractController {
 	
 	/**
 	 * @Route("/admin/article/location-select", name="admin_article_location_select")
+	 * @IsGranted("ADMIN_ARTICLE_FORM")
 	 */
 	public function getSpecificLocationSelect(Request $request){
 		$article = new Article();
